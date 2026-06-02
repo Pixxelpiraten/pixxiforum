@@ -1,0 +1,538 @@
+{
+  "schemaVersion": 3,
+  "timestamp": "2026-06-02T08:34:31.457Z",
+  "host": {
+    "platform": "win32",
+    "arch": "x64",
+    "release": "10.0.26200",
+    "hostname": "DESKTOP-ADMLNBS"
+  },
+  "workspace": {
+    "name": "pixxiforum",
+    "folder": "c:\\xampp\\htdocs\\pixxiforum"
+  },
+  "git": {
+    "available": true,
+    "branch": "main",
+    "commit": "93e22a358a111df578c27dc328709d12e4e4db0d",
+    "shortCommit": "93e22a3",
+    "dirty": true,
+    "remoteUrl": "https://github.com/Pixxelpiraten/pixxiforum.git"
+  },
+  "runtimes": {
+    "node": "24.16.0",
+    "git": "2.54.0",
+    "python": "3.14.5",
+    "dotnet": "10.0.300",
+    "npm": "11.13.0"
+  },
+  "docker": {
+    "available": true,
+    "version": "29.5.2",
+    "composeVersion": "5.1.3",
+    "containers": []
+  },
+  "ports": [],
+  "env": [
+    {
+      "key": "AWS_SDK_LOAD_CONFIG",
+      "source": "process"
+    }
+  ],
+  "scripts": [],
+  "lockfiles": [],
+  "extensions": [
+    {
+      "id": "14ag.blinter",
+      "version": "1.26.38560",
+      "builtin": false
+    },
+    {
+      "id": "alekseialeinikov.dev-env-diff",
+      "version": "0.3.5",
+      "builtin": false
+    },
+    {
+      "id": "amazonwebservices.aws-toolkit-vscode",
+      "version": "4.6.1",
+      "builtin": false
+    },
+    {
+      "id": "ardevia.sculptui-vscode",
+      "version": "0.7.1",
+      "builtin": false
+    },
+    {
+      "id": "ArthurBlumberg.dotnet-container-debug-wizard-vscode",
+      "version": "0.1.5",
+      "builtin": false
+    },
+    {
+      "id": "BaasiS.blendpybridge",
+      "version": "2402.7.0",
+      "builtin": false
+    },
+    {
+      "id": "ban.quietlight-plus",
+      "version": "1.0.41",
+      "builtin": false
+    },
+    {
+      "id": "bialikover.vscode-to-photoshop",
+      "version": "0.0.3",
+      "builtin": false
+    },
+    {
+      "id": "bsv-scrypt.sCrypt",
+      "version": "1.16.15",
+      "builtin": false
+    },
+    {
+      "id": "calebporzio.simple-php-cs-fixer",
+      "version": "1.0.3",
+      "builtin": false
+    },
+    {
+      "id": "cBrainF2.f2-script-debugger",
+      "version": "0.2.0",
+      "builtin": false
+    },
+    {
+      "id": "chriscamicas.openedge-abl",
+      "version": "1.3.0",
+      "builtin": false
+    },
+    {
+      "id": "christian-kohler.path-intellisense",
+      "version": "2.10.0",
+      "builtin": false
+    },
+    {
+      "id": "CodFrm.scriptcat-vscode",
+      "version": "0.6.2",
+      "builtin": false
+    },
+    {
+      "id": "dbaeumer.vscode-eslint",
+      "version": "3.0.24",
+      "builtin": false
+    },
+    {
+      "id": "Deltin.overwatch-script-to-workshop",
+      "version": "3.14.0",
+      "builtin": false
+    },
+    {
+      "id": "DEVSENSE.composer-php-vscode",
+      "version": "1.70.18915",
+      "builtin": false
+    },
+    {
+      "id": "DEVSENSE.intelli-php-vscode",
+      "version": "0.12.17700",
+      "builtin": false
+    },
+    {
+      "id": "DEVSENSE.phptools-vscode",
+      "version": "1.70.18915",
+      "builtin": false
+    },
+    {
+      "id": "DEVSENSE.profiler-php-vscode",
+      "version": "1.70.18915",
+      "builtin": false
+    },
+    {
+      "id": "DGSDiagnosticsRND.scriptpoints-DGS",
+      "version": "0.0.3",
+      "builtin": false
+    },
+    {
+      "id": "epolicardo.signalr-hub-debugger",
+      "version": "0.3.1",
+      "builtin": false
+    },
+    {
+      "id": "esbenp.prettier-vscode",
+      "version": "12.4.0",
+      "builtin": false
+    },
+    {
+      "id": "felixezamavaughan.replstash",
+      "version": "0.0.1",
+      "builtin": false
+    },
+    {
+      "id": "firefox-devtools.vscode-firefox-debug",
+      "version": "2.15.0",
+      "builtin": false
+    },
+    {
+      "id": "florinpatrascu.vscode-elixir-snippets",
+      "version": "0.2.52",
+      "builtin": false
+    },
+    {
+      "id": "forward2k.phpnexus",
+      "version": "1.0.0",
+      "builtin": false
+    },
+    {
+      "id": "GitHub.copilot-chat",
+      "version": "0.50.1",
+      "builtin": false
+    },
+    {
+      "id": "GitHub.remotehub",
+      "version": "0.64.0",
+      "builtin": false
+    },
+    {
+      "id": "Halon.hsl-debug",
+      "version": "1.2.1",
+      "builtin": false
+    },
+    {
+      "id": "Halon.vscode-halon",
+      "version": "6.10.4",
+      "builtin": false
+    },
+    {
+      "id": "huanent.node-runner",
+      "version": "1.0.2",
+      "builtin": false
+    },
+    {
+      "id": "humao.rest-client",
+      "version": "0.25.1",
+      "builtin": false
+    },
+    {
+      "id": "JosephAllen.apex-code-runner",
+      "version": "0.1.7",
+      "builtin": false
+    },
+    {
+      "id": "LemonZhang.easy-less",
+      "version": "0.21.0",
+      "builtin": false
+    },
+    {
+      "id": "levkosyk.vscode-android-tools",
+      "version": "0.2.7",
+      "builtin": false
+    },
+    {
+      "id": "LocalStack.localstack",
+      "version": "1.7.0",
+      "builtin": false
+    },
+    {
+      "id": "MadhurPrakash.post-commit-reviewer",
+      "version": "1.1.1",
+      "builtin": false
+    },
+    {
+      "id": "maerekai.sheerpower-debug",
+      "version": "0.1.13",
+      "builtin": false
+    },
+    {
+      "id": "marcovr.actions-shell-scripts",
+      "version": "1.0.1",
+      "builtin": false
+    },
+    {
+      "id": "matthiesen-technology.yaml-with-script",
+      "version": "1.1.3",
+      "builtin": false
+    },
+    {
+      "id": "mechatroner.rainbow-csv",
+      "version": "3.24.1",
+      "builtin": false
+    },
+    {
+      "id": "mgmcdermott.vscode-language-babel",
+      "version": "0.0.40",
+      "builtin": false
+    },
+    {
+      "id": "ms-azuretools.vscode-containers",
+      "version": "2.4.5",
+      "builtin": false
+    },
+    {
+      "id": "ms-dotnettools.csdevkit",
+      "version": "3.20.199",
+      "builtin": false
+    },
+    {
+      "id": "ms-dotnettools.vscode-dotnet-runtime",
+      "version": "3.0.2",
+      "builtin": false
+    },
+    {
+      "id": "ms-edgedevtools.vscode-edge-devtools",
+      "version": "2.1.10",
+      "builtin": false
+    },
+    {
+      "id": "ms-python.debugpy",
+      "version": "2026.6.0",
+      "builtin": false
+    },
+    {
+      "id": "ms-python.python",
+      "version": "2026.4.0",
+      "builtin": false
+    },
+    {
+      "id": "ms-python.vscode-python-envs",
+      "version": "1.30.0",
+      "builtin": false
+    },
+    {
+      "id": "ms-toolsai.jupyter",
+      "version": "2025.9.1",
+      "builtin": false
+    },
+    {
+      "id": "ms-toolsai.jupyter-keymap",
+      "version": "1.1.2",
+      "builtin": false
+    },
+    {
+      "id": "ms-toolsai.jupyter-renderers",
+      "version": "1.3.0",
+      "builtin": false
+    },
+    {
+      "id": "ms-toolsai.vscode-jupyter-cell-tags",
+      "version": "0.1.9",
+      "builtin": false
+    },
+    {
+      "id": "ms-toolsai.vscode-jupyter-slideshow",
+      "version": "0.1.6",
+      "builtin": false
+    },
+    {
+      "id": "ms-vscode-remote.remote-containers",
+      "version": "0.459.0",
+      "builtin": false
+    },
+    {
+      "id": "ms-vscode-remote.remote-wsl",
+      "version": "0.104.3",
+      "builtin": false
+    },
+    {
+      "id": "naumovs.color-highlight",
+      "version": "2.8.0",
+      "builtin": false
+    },
+    {
+      "id": "ndmitchell.haskell-ghcid",
+      "version": "0.3.1",
+      "builtin": false
+    },
+    {
+      "id": "nguyenngoclong.terminal-keeper",
+      "version": "1.2.0",
+      "builtin": false
+    },
+    {
+      "id": "nsy.javascript-react-extensions-pack",
+      "version": "1.0.2",
+      "builtin": false
+    },
+    {
+      "id": "Obsidian-Fault.obsidian-fault-script",
+      "version": "1.0.101",
+      "builtin": false
+    },
+    {
+      "id": "oleg-shilo.cs-script",
+      "version": "2.3.6",
+      "builtin": false
+    },
+    {
+      "id": "pflannery.vscode-versionlens",
+      "version": "1.28.0",
+      "builtin": false
+    },
+    {
+      "id": "redhat.vscode-yaml",
+      "version": "1.23.0",
+      "builtin": false
+    },
+    {
+      "id": "ritwickdey.LiveServer",
+      "version": "5.7.10",
+      "builtin": false
+    },
+    {
+      "id": "rogalmic.bash-debug",
+      "version": "0.3.9",
+      "builtin": false
+    },
+    {
+      "id": "ryzngard.vscode-header-source",
+      "version": "1.5.0",
+      "builtin": false
+    },
+    {
+      "id": "SaikatDas.output-formatter",
+      "version": "1.2.4",
+      "builtin": false
+    },
+    {
+      "id": "salesforce.salesforcedx-vscode-core",
+      "version": "66.12.3",
+      "builtin": false
+    },
+    {
+      "id": "salesforce.salesforcedx-vscode-services",
+      "version": "66.12.3",
+      "builtin": false
+    },
+    {
+      "id": "SiddharthVerma.python-super-debugger-mode",
+      "version": "0.0.3",
+      "builtin": false
+    },
+    {
+      "id": "Sixth.sixth-ai",
+      "version": "0.0.96",
+      "builtin": false
+    },
+    {
+      "id": "streetsidesoftware.code-spell-checker",
+      "version": "4.5.6",
+      "builtin": false
+    },
+    {
+      "id": "syler.sass-indented",
+      "version": "1.8.33",
+      "builtin": false
+    },
+    {
+      "id": "TanishRanjan.the-professionals-language",
+      "version": "0.0.4",
+      "builtin": false
+    },
+    {
+      "id": "TGOSystems.togglebracketguides",
+      "version": "0.1.6",
+      "builtin": false
+    },
+    {
+      "id": "thimo.integrated-browser-mcp",
+      "version": "0.5.3",
+      "builtin": false
+    },
+    {
+      "id": "tomoki1207.pdf",
+      "version": "1.2.2",
+      "builtin": false
+    },
+    {
+      "id": "tusaeff.vscode-iterm2-theme-sync",
+      "version": "0.1.3",
+      "builtin": false
+    },
+    {
+      "id": "TuyMove.tcc-compiler",
+      "version": "0.0.4",
+      "builtin": false
+    },
+    {
+      "id": "TylerLeonhardt.vscode-inline-values-powershell",
+      "version": "0.0.7",
+      "builtin": false
+    },
+    {
+      "id": "TypeScriptTeam.jsts-chat-features",
+      "version": "0.0.2",
+      "builtin": false
+    },
+    {
+      "id": "UbonPatrusm.serverpulse",
+      "version": "2.1.0",
+      "builtin": false
+    },
+    {
+      "id": "vaulttec-dev.snakeflow-dev-manager",
+      "version": "0.5.26",
+      "builtin": false
+    },
+    {
+      "id": "visualstudiotoolsforunity.vstuc",
+      "version": "1.2.2",
+      "builtin": false
+    },
+    {
+      "id": "vogadero.apimatex",
+      "version": "0.0.4",
+      "builtin": false
+    },
+    {
+      "id": "wayou.vscode-todo-highlight",
+      "version": "1.0.5",
+      "builtin": false
+    },
+    {
+      "id": "windmillcode-publisher-0.lib-tracker",
+      "version": "1.101.2000",
+      "builtin": false
+    },
+    {
+      "id": "wix.vscode-import-cost",
+      "version": "3.3.0",
+      "builtin": false
+    },
+    {
+      "id": "X4DevTools.x4codedebug",
+      "version": "1.0.3",
+      "builtin": false
+    },
+    {
+      "id": "xabikos.ReactSnippets",
+      "version": "2.4.0",
+      "builtin": false
+    },
+    {
+      "id": "Zignd.html-css-class-completion",
+      "version": "1.20.0",
+      "builtin": false
+    }
+  ],
+  "shellRc": [],
+  "path": [
+    "C:\\Python314\\Scripts\\",
+    "C:\\Python314\\",
+    "C:\\WINDOWS\\system32",
+    "C:\\WINDOWS",
+    "C:\\WINDOWS\\System32\\Wbem",
+    "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\",
+    "C:\\WINDOWS\\System32\\OpenSSH\\",
+    "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\",
+    "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\",
+    "C:\\Program Files\\dotnet\\",
+    "C:\\Program Files\\Microsoft SQL Server\\170\\DTS\\Binn\\",
+    "C:\\Program Files\\Docker\\Docker\\resources\\bin",
+    "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\",
+    "C:\\Program Files\\nodejs\\",
+    "C:\\ProgramData\\chocolatey\\bin",
+    "C:\\Program Files\\localstack\\localstack",
+    "C:\\Program Files\\Amazon\\AWSSAMCLI\\bin\\",
+    "C:\\Program Files\\Git\\cmd",
+    "C:\\Users\\Pixxel\\AppData\\Local\\Microsoft\\WindowsApps",
+    "C:\\Users\\Pixxel\\.dotnet\\tools",
+    "C:\\Users\\Pixxel\\AppData\\Local\\Programs\\Microsoft VS Code\\bin",
+    "C:\\Users\\Pixxel\\AppData\\Local\\Microsoft\\WinGet\\Links",
+    "C:\\Users\\Pixxel\\AppData\\Roaming\\npm"
+  ],
+  "warnings": []
+}
