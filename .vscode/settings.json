@@ -1,0 +1,6 @@
+{
+    "serverpulse.ai.enabled": true,
+    "abl.checkProgressBinary": false,
+    "abl.warnConfigFile": false,
+    "serverpulse.ai.optInShown": true
+}

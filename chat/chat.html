@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>PixxiForum – Live Chat</title>
+<style>
+    body {
+        margin: 0;
+        background: #000;
+        color: #00ff41;
+        font-family: "Courier New", monospace;
+        overflow: hidden;
+    }
+
+    #chatbox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80vh;
+        overflow-y: auto;
+        padding: 20px;
+        background: rgba(0,20,0,0.4);
+        border-bottom: 1px solid #00ff41;
+        z-index: 2;
+    }
+
+    #inputbox {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        gap: 10px;
+        background: rgba(0,20,0,0.6);
+        z-index: 2;
+    }
+
+    input, button {
+        background: #001900;
+        border: 1px solid #00ff41;
+        color: #00ff41;
+        padding: 10px;
+        font-family: "Courier New", monospace;
+    }
+
+    input {
+        flex: 1;
+    }
+
+    button:hover {
+        background: #003300;
+        cursor: pointer;
+    }
+
+    #matrix {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+</style>
+</head>
+<body>
+
+<canvas id="matrix"></canvas>
+
+<div id="chatbox">Lade Chat…</div>
+
+<div id="inputbox">
+    <input type="text" id="msg" placeholder="Nachricht eingeben…">
+    <button onclick="sendMsg()">Senden</button>
+</div>
+
+<audio id="sound" src="notify.mp3"></audio>
+
+<script>
+// MATRIX REGEN
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
+
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+
+const chars = "01";
+const fontSize = 16;
+const columns = canvas.width / fontSize;
+
+let drops = [];
+for (let i = 0; i < columns; i++) drops[i] = 1;
+
+function draw() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#00ff41";
+    ctx.font = fontSize + "px monospace";
+
+    for (let i = 0; i < drops.length; i++) {
+        const text = chars.charAt(Math.floor(Math.random() * chars.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975)
+            drops[i] = 0;
+
+        drops[i]++;
+    }
+}
+setInterval(draw, 33);
+
+// USERNAME
+let user = localStorage.getItem("pixxi_user") || "Gast";
+
+// USER-FARBE
+function getUserColor(name) {
+    let hash = 0;
+    for (let i = 0; i < name.length; i++) {
+        hash = name.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    let color = "#";
+    for (let i = 0; i < 3; i++) {
+        let value = (hash >> (i * 8)) & 255;
+        color += ("00" + value.toString(16)).substr(-2);
+    }
+    return color;
+}
+
+// CHAT LADEN
+let lastChat = "";
+
+function loadChat() {
+    fetch("read.php")
+        .then(r => r.text())
+        .then(t => {
+            if (t !== lastChat) {
+                document.getElementById("sound").play();
+                lastChat = t;
+            }
+            document.getElementById("chatbox").innerHTML = t;
+            document.getElementById("chatbox").scrollTop = 999999;
+        });
+}
+setInterval(loadChat, 1000);
+loadChat();
+
+// ENTER SENDEN
+document.getElementById("msg").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") sendMsg();
+});
+
+// ANTI-SPAM
+let lastSend = 0;
+
+// SENDEN
+function sendMsg() {
+    let now = Date.now();
+    if (now - lastSend < 1000) return;
+    lastSend = now;
+
+    let msg = document.getElementById("msg").value;
+    if (msg.trim() === "") return;
+
+    fetch("write.php?msg=" + encodeURIComponent(msg) + "&user=" + encodeURIComponent(user));
+    document.getElementById("msg").value = "";
+}
+</script>
+
+</body>
+</html>

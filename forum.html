@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>PixxiForum – Forum</title>
+<style>
+    body {
+        background: #000;
+        color: #00ff41;
+        font-family: "Courier New", monospace;
+        margin: 0;
+    }
+    .container {
+        width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+        border: 1px solid #00ff41;
+        background: rgba(0,20,0,0.4);
+    }
+    a { color: #00ff41; text-decoration: none; }
+    a:hover { text-shadow: 0 0 10px #00ff41; }
+    .category, .thread, .post {
+        border-bottom: 1px solid #003300;
+        padding: 10px 0;
+    }
+    .title {
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-shadow: 0 0 10px #00ff41;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>PixxiForum – Forum</h1>
+    <p><a href="index.html">Zurück zur Startseite</a></p>
+
+    <div class="title">Kategorien</div>
+
+    <div class="category">
+        <a href="#threads1">Allgemeine Diskussion</a>
+    </div>
+
+    <div class="category">
+        <a href="#threads2">Support & Hilfe</a>
+    </div>
+
+    <div class="category">
+        <a href="#threads3">Off‑Topic</a>
+    </div>
+
+    <hr>
+
+    <div class="title" id="threads1">Threads – Allgemeine Diskussion</div>
+
+    <div class="thread">
+        <a href="#post1">Willkommen im PixxiForum</a>
+    </div>
+
+    <div class="thread">
+        <a href="#post2">Vorstellungsthread</a>
+    </div>
+
+    <hr>
+
+    <div class="title" id="post1">Thread: Willkommen im PixxiForum</div>
+
+    <div class="post">
+        <strong>Admin:</strong><br>
+        Willkommen im Forum! Viel Spaß beim Chatten und Diskutieren.
+    </div>
+
+    <hr>
+
+    <div class="title" id="post2">Thread: Vorstellungsthread</div>
+
+    <div class="post">
+        <strong>User123:</strong><br>
+        Hallo zusammen, ich bin neu hier!
+    </div>
+
+</div>
+
+</body>
+</html>

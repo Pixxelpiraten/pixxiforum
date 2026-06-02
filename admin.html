@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>PixxiForum – Adminbereich</title>
+<style>
+    body {
+        background: #000;
+        color: #00ff41;
+        font-family: "Courier New", monospace;
+    }
+    .container {
+        width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+        border: 1px solid #00ff41;
+        background: rgba(0,20,0,0.4);
+    }
+    input, textarea {
+        width: 100%;
+        padding: 8px;
+        background: #001900;
+        border: 1px solid #00ff41;
+        color: #00ff41;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>PixxiForum – Adminbereich</h1>
+    <p><a href="index.html">Logout</a></p>
+
+    <h2>Kategorien verwalten</h2>
+    <input type="text" placeholder="Neue Kategorie">
+    <button style="padding:10px;">Hinzufügen</button>
+
+    <h2>Benutzer verwalten</h2>
+    <ul>
+        <li>admin (Administrator)</li>
+        <li>User123 (Mitglied)</li>
+        <li>TestUser (Mitglied)</li>
+    </ul>
+
+    <h2>Systemeinstellungen</h2>
+    <input type="text" value="PixxiForum">
+    <textarea rows="3">Das Hacker‑Forum der Zukunft.</textarea>
+</div>
+
+</body>
+</html>
+<h2>Chat löschen</h2>
+<form action="chat/clear.php" method="POST">
+    <button style="padding:10px;">Chat leeren</button>
+</form>

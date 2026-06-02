@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>PixxiForum – Willkommen</title>
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        background: black;
+        color: #00ff41;
+        font-family: "Courier New", monospace;
+    }
+
+    .center-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        background: rgba(0,0,0,0.6);
+        padding: 30px;
+        border: 1px solid #00ff41;
+        box-shadow: 0 0 20px #00ff41;
+    }
+
+    h1 {
+        font-size: 40px;
+        text-shadow: 0 0 15px #00ff41;
+    }
+
+    a.btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: 1px solid #00ff41;
+        color: #00ff41;
+        text-decoration: none;
+        transition: 0.2s;
+    }
+
+    a.btn:hover {
+        background: #003300;
+        box-shadow: 0 0 15px #00ff41;
+    }
+</style>
+</head>
+<body>
+
+<canvas id="matrix"></canvas>
+
+<div class="center-box">
+    <h1>Willkommen im PixxiForum</h1>
+    <p>Der digitale Treffpunkt für Hacker, Nerds und Tech‑Geister.</p>
+    <a class="btn" href="forum.html">Hier geht’s zum Forum</a><br><br>
+    <a class="btn" href="member.html">Member Login</a>
+</div>
+
+<script>
+// MATRIX REGEN
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
+
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+
+const chars = "01";
+const fontSize = 16;
+const columns = canvas.width / fontSize;
+
+let drops = [];
+for (let i = 0; i < columns; i++) drops[i] = 1;
+
+function draw() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#00ff41";
+    ctx.font = fontSize + "px monospace";
+
+    for (let i = 0; i < drops.length; i++) {
+        const text = chars.charAt(Math.floor(Math.random() * chars.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975)
+            drops[i] = 0;
+
+        drops[i]++;
+    }
+}
+
+setInterval(draw, 33);
+</script>
+
+</body>
+</html>

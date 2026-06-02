@@ -1,0 +1,89 @@
+body {
+    background: #000;
+    color: #00ff41;
+    font-family: "Courier New", monospace;
+}
+
+.box {
+    width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid #00ff41;
+    background: rgba(0,20,0,0.4);
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #001900;
+    border: 1px solid #00ff41;
+    color: #00ff41;
+}
+
+button:hover {
+    background: #003300;
+    cursor: pointer;
+}
+
+a {
+    color: #00ff41;
+}
+/* MOBILE OPTIMIERUNG */
+@media (max-width: 768px) {
+
+    body {
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    .box {
+        width: 95% !important;
+        margin: 20px auto !important;
+        padding: 15px !important;
+    }
+
+    input, button, textarea {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    a {
+        font-size: 18px;
+    }
+
+    /* Tabellen mobil scrollbar machen */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Chat */
+    #chatbox {
+        height: 70vh !important;
+        padding: 10px !important;
+        font-size: 16px;
+    }
+
+    #inputbox {
+        padding: 10px !important;
+        flex-direction: column;
+    }
+
+    #inputbox input {
+        width: 100%;
+    }
+
+    #inputbox button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Avatar */
+    .avatar {
+        width: 120px !important;
+        height: 120px !important;
+    }
+}

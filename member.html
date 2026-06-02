@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>PixxiForum – Member Login</title>
+<style>
+    body {
+        background: #000;
+        color: #00ff41;
+        font-family: "Courier New", monospace;
+    }
+    .box {
+        width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        border: 1px solid #00ff41;
+        background: rgba(0,20,0,0.4);
+    }
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        background: #001900;
+        border: 1px solid #00ff41;
+        color: #00ff41;
+    }
+    .btn {
+        width: 100%;
+        padding: 10px;
+        background: #003300;
+        border: 1px solid #00ff41;
+        color: #00ff41;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>PixxiForum – Member Login</title>
+<style>
+    body {
+        background: #000;
+        color: #00ff41;
+        font-family: "Courier New", monospace;
+    }
+    .box {
+        width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        border: 1px solid #00ff41;
+        background: rgba(0,20,0,0.4);
+    }
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        background: #001900;
+        border: 1px solid #00ff41;
+        color: #00ff41;
+    }
+    .btn {
+        width: 100%;
+        padding: 10px;
+        background: #003300;
+        border: 1px solid #00ff41;
+        color: #00ff41;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Member Login</h2>
+
+    <form onsubmit="return checkLogin()">
+        <input type="text" id="user" placeholder="Benutzername">
+        <input type="password" id="pass" placeholder="Passwort">
+        <button class="btn">Login</button>
+    </form>
+
+    <p><a href="index.html">Zurück</a></p>
+</div>
+
+<script>
+function checkLogin() {
+    const u = document.getElementById("user").value;
+    const p = document.getElementById("pass").value;
+
+    // Admin Login
+    if (u === "admin" && p === "admin") {
+        window.location.href = "admin.html";
+        return false;
+    }
+
+    // Member Login (jeder Name erlaubt)
+    if (u.length > 0 && p.length > 0) {
+        localStorage.setItem("pixxi_user", u);
+        window.location.href = "chat/chat.html";
+        return false;
+    }
+
+    alert("Bitte Benutzername und Passwort eingeben.");
+    return false;
+}
+</script>
+
+</body>
+</html>
