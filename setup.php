@@ -66,8 +66,10 @@ foreach ($tables as $sql) {
 // Admin anlegen, falls nicht vorhanden
 $adminCheck = $mysqli->query("SELECT id FROM users WHERE username='admin'");
 
+$generatedPassword = null;
 if ($adminCheck->num_rows === 0) {
-    $pass = password_hash(bin2hex(random_bytes(12)), PASSWORD_BCRYPT); // historisches Klartext-Passwort entfernt
+    $generatedPassword = bin2hex(random_bytes(12));
+    $pass = password_hash($generatedPassword, PASSWORD_BCRYPT);
     $mysqli->query("INSERT INTO users (username, password, role) VALUES ('admin', '$pass', 'admin')");
 }
 
@@ -90,8 +92,11 @@ echo "
 <body>
 <div class='box'>
 <h2>Installation erfolgreich!</h2>
-<p>Datenbank <strong>$DB_NAME</strong> wurde eingerichtet.</p>
-<p>Admin-Login: <strong>[redacted]</strong></p>
+<p>Datenbank <strong>$DB_NAME</strong> wurde eingerichtet.</p>" .
+($generatedPassword !== null
+    ? "<p>Admin-Login: <strong>admin</strong> / <strong>$generatedPassword</strong><br>Bitte merken und dieses Passwort nach dem ersten Login ändern – es wird nirgends gespeichert.</p>"
+    : "<p>Admin-Account existiert bereits, Passwort wurde nicht verändert.</p>") . "
+<p><strong>Wichtig:</strong> Lösche setup.php jetzt vom Server.</p>
 <p><a href='index.php'>Zum Forum starten</a></p>
 </div>
 </body>
